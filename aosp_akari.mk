@@ -8,7 +8,13 @@
 $(call inherit-product, device/sony/akari/device.mk)
 
 # Inherit some common Lineage stuff.
-#$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+TARGET_BOOT_ANIMATION_RES := 1080
+#TARGET_USES_AOSP_RECOVERY := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_NAME := aosp_akari
 PRODUCT_DEVICE := akari
